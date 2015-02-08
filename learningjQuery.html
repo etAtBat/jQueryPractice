@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		    <meta charset="utf-8" />
+    		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  		    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ 		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		    <title>learning jQuery</title>
+		    <style>
+		    	#header{
+		    		padding:10px;
+		    		text-align: center;
+		    	}
+		    	.item{
+		    		text-align: center;
+		    	}
+		    	.item-bottom{
+		    		text-align: center;
+		    	}
+		    </style>
+	</head>
+	<body>
+	<div id="container">
+		<div class="jumbotron" id="header">
+  			<h1>Hello, world!</h1>
+  			<p class="small">experimenting with jQuery and Bootstrap</p>
+  			<div class="btn-group" role="group" aria-label="...">
+  				<button type="button" class="btn btn-danger panel-button" data-panelid="panel1">&nbsp#btn1&nbsp</button>
+  				<button type="button" class="btn btn-warning panel-button" data-panelid="panel2">&nbsp#btn2&nbsp</button>
+  				<button type="button" class="btn btn-info panel-button" data-panelid="panel3">&nbsp#btn3&nbsp</button>
+  				<button type="button" class="btn btn-primary panel-button" data-panelid="panel4">&nbsp#btn4&nbsp</button>
+  			</div>
+		</div>
+		<!--panels below-->
+		<div class="col-md-3">
+			<div class="panel panel-danger" id="panel1">
+				<div class="panel-heading">
+					<div class="item">
+						<span class="glyphicon glyphicon-globe"></span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<p>#panel1</p>
+				</div>
+				<div class="panel-footer">
+					<div class="item-bottom">
+						<span class="glyphicon glyphicon-bishop"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-warning" id="panel2">
+				<div class="panel-heading">
+					<div class="item">
+						<span class="glyphicon glyphicon-headphones"></span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<p>#panel2</p>
+				</div>
+				<div class="panel-footer">
+					<div class="item-bottom">
+						<span class="glyphicon glyphicon-king"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-info" id="panel3">
+				<div class="panel-heading">
+					<div class="item">
+						<span class="glyphicon glyphicon-camera"></span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<p>#panel3</p>
+				</div>
+				<div class="panel-footer">
+					<div class="item-bottom">
+						<span class="glyphicon glyphicon-king"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-primary" id="panel4">
+				<div class="panel-heading">
+					<div class="item">
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<p>#panel4</p>
+				</div>
+				<div class="panel-footer">
+					<div class="item-bottom">
+						<span class="glyphicon glyphicon-bishop"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script>
+		$(function(){
+			$('.btn').on('click',function(){
+				$("#panel1").slideToggle(850);
+			});
+
+		});
+
+	</script>
+</html>
